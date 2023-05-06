@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f3f5fc;
+        
+        }
+        h1,h2,h3,h4,h5,h6,p{
+            font-family: 'Roboto', sans-serif;
+        }
+        
+
+        .cuadro{
+            padding: 0 0 0 0;
+            text-align: center;
+            width: 400px;
+            height: 500px;
+            left: 1100px;
+            top: 40px;
+            background-color: #FFFFFF;
+            box-shadow:0px 33px 41px -9px rgba(12, 0, 0, 1.08);
+            border-radius: 32px;
+        }
+        #logo{
+            margin-top: 50px;
+        }
+        #escrito{
+            margin-top: 80px;
+            height: 400px;
+            width: 800px;
+            background-color: #f3f5fc;
+            border: none;
+            color: #0A3871;
+            font-size: 70px;
+            text-align: justify;
+            resize: none;
+        }
+        #escrito:focus{
+            outline: none;
+        }
+        .p1{
+            display: block;
+        }
+        .botones{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            padding:0 50px  0 0px;
+            gap: 50px;
+
+        }
+        .btn1{
+            width: 200px;
+            height: 50px;
+            background-color: #0A3871;
+            border-radius: 20px;
+            color: #FFFFFF;
+            cursor: pointer;
+            border: none;
+            
+        }
+        .btn2{
+            cursor: pointer;
+            width: 200px;
+            height: 50px;
+            background-color: #D8DFE8;
+            border-radius: 20px;
+            color: #0A3871;
+            border: 1px solid #0A3871;
+        }
+        #btn3{
+            cursor: pointer;
+            width: 200px;
+            height: 50px;
+            background-color: #D8DFE8;
+            border-radius: 20px;
+            color: #0A3871;
+            border: 1px solid #0A3871;
+            display: none;
+        }
+        #inferior{
+            margin-top: 100px;
+            margin-bottom: 50px;
+        }
+        #textoinfe{
+            color: #0A3871;
+            font-size: 20px;
+            padding: 0px 0px 14px 141px;
+        }
+        #mensaje{
+            color: #0A3871;
+            font-size: 30px;
+            padding: 20px 20px 20px 20px;
+            height: auto;
+            word-wrap: break-word;
+        }
+        #btn-copiar{
+            text-align: center;
+            padding: 49px 0px 0px 110px;
+        }
+
+        header{
+            margin: 10px 0 0 0;
+        }
+        #section1{
+            margin: -31px 0 0 0;
+            padding: 0 0 0 0;
+            text-align: start;
+        }
+        #container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        @media (max-width: 1200px){
+            .btn1, .btn2, #btn3{
+            width: 300px;
+            height: 50px;
+        }
+
+        .cuadro{
+            padding: 20px 0 0 0;
+            text-align: center;
+            width: 600px;
+            height: auto;
+            left: 1100px;
+            top: 40px;
+            background-color: #FFFFFF;
+            box-shadow:0px 33px 41px -9px rgba(12, 0, 0, 1.08);
+            border-radius: 32px;
+        }
+        #muñeco{
+            display: none;
+        }	
+
+        }
+        @media (max-width: 600px) {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #escrito{
+            width: 300px;
+            height: 200px;
+            font-size: 30px;
+         } 
+        #section1{
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            text-align: center;  
+        }
+        .botones{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            padding:0 0px  0 0px;
+            gap: 10px;
+        }
+        #textoinfe{
+            padding: 0px 0px 0px 0px;
+        }
+        .btn1, .btn2, #btn3{
+            width: 175px;
+            height: 50px;
+        }
+
+        .cuadro{
+            padding: 20px 0 0 0;
+            text-align: center;
+            width: 350px;
+            height: auto;
+            left: 1100px;
+            top: 40px;
+            background-color: #FFFFFF;
+            box-shadow:0px 33px 41px -9px rgba(12, 0, 0, 1.08);
+            border-radius: 32px;
+        }
+        #btn-copiar{
+            text-align: center;
+            padding: 40px 0px 0px 91px;
+        }
+        #muñeco{
+            display: none;
+        }	
+        
+        
+       
+    }
+    </style>
+</head>
+<body>
+        
+            <header>
+                <img src="img\Logo (3).png" alt=""  >
+            </header>
+               
+
+            
+            <div id="container">
+
+            <section id="section1">
+                <form action=""  >
+                    <textarea id="escrito" name="story"rows="10" cols="10" placeholder="Ingrese el texto"></textarea>
+                </form>
+
+                <div>
+                    <div  id="inferior">
+                        <p id="textoinfe"> <img src="img\bi_exclamation-circle-fill.png" alt="">    Solo letras minúsculas y sin acentos</p>
+                            
+                            <div class="botones">
+                            <button   class="btn1"  id="encriptar" onclick="encriptar()" >Encriptar</button>
+    
+                            <button class="btn2" onclick="desencriptar()"> Desencriptar </button>
+                            </div>
+                    </div>
+                </div>
+            </section>
+                
+           <section id="section2">
+            <div class="cuadro">
+                <div id="p1">
+                    <img src="img\Muñeco.png" alt="" id="muñeco">
+                    <h1>Ningún mensaje fue encontrado</h1>
+                    <p >Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+               
+        <h5 id="mensaje"></h5>
+    
+        <div id="btn-copiar">
+            <button id="btn3" onclick="copiar()">Copiar</button>
+        </div>
+                </div>
+          
+
+           </section>
+            </div>
+
+
+       
+    
+
+
+
+
+        <script>
+            function encriptar(){
+                document.getElementById("p1").style.display = "none";
+                document.getElementById("btn3").style.display = "block";
+                let texto = document.getElementById("escrito").value;
+                
+                let a="ai";
+                let e="enter";
+                let i="imes";
+                let o="ober";
+                let u="ufat";
+
+                let vectorsito= texto.split(""); 
+                 console.log(vectorsito);
+                 for (let i = 0; i < vectorsito.length; i++) {
+                    if (vectorsito[i]=="a") {
+                        vectorsito[i]=a;
+                    }
+                    if (vectorsito[i]=="e") {
+                        vectorsito[i]=e;
+                    }
+                    if (vectorsito[i]=="i") {
+                        vectorsito[i]=i;
+                    }
+                    if (vectorsito[i]=="o") {
+                        vectorsito[i]=o;
+                    }
+                    if (vectorsito[i]=="u") {
+                        vectorsito[i]=u;
+                    }
+                 }
+                 
+                let vectorsito2= vectorsito.join("");
+                document.getElementById("mensaje").innerHTML = vectorsito2;
+
+                document.getElementById("btn3").style.display = "block";
+
+                }
+
+
+            function desencriptar(){
+
+                document.getElementById("btn3").style.display = "block";
+
+                document.getElementById("p1").style.display = "none";
+                let texto = document.getElementById("escrito").value;
+               
+                const text = texto;
+                const dict = {
+                "ai": "a",
+                "enter": "e",
+                "imes": "i",
+                "ober": "o",
+                "ufat": "u"
+                };
+
+                const pattern = new RegExp(`(${Object.keys(dict).join('|')})`, "g");
+
+                const vectorsito2 = text.replace(pattern, (match) => {
+                return dict[match];
+                });
+
+                 document.getElementById("mensaje").innerHTML =vectorsito2 ;
+
+            }
+            
+
+            function copiar(){
+                const botonCopiar = document.getElementById("btn3");
+                const contenidoACopiar = document.getElementById("mensaje");
+
+                botonCopiar.addEventListener("click", async () => {
+                try {
+                    await navigator.clipboard.writeText(contenidoACopiar.textContent);
+                    alert("El contenido ha sido copiado correctamente");
+                } catch (error) {
+                    alert("Ha ocurrido un error al copiar el contenido", error);
+                }
+                });
+            }
+        </script>
+      
+</body>
+
+
+</html>
+
